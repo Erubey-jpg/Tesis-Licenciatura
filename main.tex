@@ -1,0 +1,163 @@
+\documentclass{book}
+
+% Paquetería relevante para el documento
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish, es-tabla]{babel}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+% Paquetes de fuente
+\usepackage{newpxtext} 
+\usepackage{newpxmath}
+
+\usepackage{graphicx}
+\usepackage{emptypage}
+\usepackage{csquotes}
+
+% Configuración de la bibliografía
+\usepackage[
+    backend=biber, 
+    style=numeric, 
+    sorting=none]{biblatex}
+% Conectar con tu archivo .bib
+\addbibresource{bibliografia.bib}
+
+\usepackage[colorlinks=true, linkcolor=blue, citecolor=blue, urlcolor=blue]{hyperref}
+\usepackage[spanish, capitalize]{cleveref}
+
+\newcommand{\Pref}[1]{(\Cref{#1})}
+
+\begin{document}
+
+\frontmatter
+\begin{titlepage}
+
+% Portada
+\thispagestyle{empty}
+
+\frontmatter
+
+\begin{minipage}{.3\textwidth}
+  \flushleft
+  \center{\includegraphics[scale=.09]{unam.pdf}}
+
+  \vspace{20pt}
+
+  \center{
+    \rule{.5pt}{.6\textheight}
+    \hspace{7pt}
+    \rule{2pt}{.6\textheight}
+    \hspace{7pt}
+    \rule{.5pt}{.6\textheight}
+  } \\
+
+  \center{\includegraphics[scale=.22]{ciencias.pdf}}
+\end{minipage}
+\begin{minipage}{.7\textwidth}
+\flushright
+
+\center{
+
+  \center{
+    \LARGE{U}\large{NIVERSIDAD} \LARGE{N}\large{ACIONAL} 
+    \LARGE{A}\large{UTÓNOMA}
+    \large{DE} \LARGE{M}\large{ÉXICO} 
+  } \\
+  \rule{\textwidth}{2pt}
+  \\
+  \hrulefill\\[1cm]
+  
+  \LARGE{F}\large{ACULTAD DE } \LARGE{C}\large{IENCIAS}\\[2cm]
+
+  \huge{
+T \hspace{1cm} E \hspace{1cm} S \hspace{1cm} I \hspace{1cm} S  }\\[1cm]
+
+  \large{QUE PARA OBTENER EL TÍTULO DE:}\\[1cm]
+
+  \large{
+Físico  }\\[1cm]
+
+  \large{PRESENTA:}\\[1cm]
+
+  \large{
+Erubey Morales Teofilo  }\\[1cm]
+
+  \large{
+TUTOR  }\\[1cm]
+
+  \large{
+Roberto Kenan Uriostegui Umaña}
+\\[1cm]
+  \textit{
+Coyoacán, Ciudad de México a 8 de agosto del 2026}
+}
+
+\end{minipage}
+\end{titlepage}
+
+\clearpage
+\thispagestyle{empty}
+
+% Contenido Preeliminar
+\vspace*{5cm}
+\begin{flushright}
+\textit{A mi familia, \\ por su apoyo incondicional.}
+\end{flushright}
+
+\chapter*{Agradecimientos}
+\addcontentsline{toc}{chapter}{Agradecimientos}
+\clearpage
+\thispagestyle{empty}
+
+\chapter*{Resumen}
+\addcontentsline{toc}{chapter}{Resumen}
+El presente trabajo de tesis aborda el estudio de...
+\clearpage
+\thispagestyle{empty}
+
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+This thesis addresses the study of...
+\clearpage
+\thispagestyle{empty}
+
+% Índice
+\tableofcontents
+\newpage
+\clearpage
+\thispagestyle{empty}
+
+\mainmatter
+\chapter*{Objetivos}
+\addcontentsline{toc}{chapter}{Objetivos}
+    \section*{General}
+Analizar teóricamente las propiedades de transporte electrónico en sistemas basados en [n]-triangulenos, mediante métodos de estructura electrónica y transporte cuántico, con el fin de determinar la influencia del tamaño molecular, la geometría de acoplamiento y las condiciones externas sobre la polarización de espín, e identificar configuraciones óptimas con potencial aplicación en dispositivos espintrónicos a escala molecular.
+    \section*{Específicos}
+\begin{itemize}
+    \item Determinar la estructura electrónica de los [n]-triangulenos en equilibrio, incluyendo sus niveles de energía, distribución de densidad electrónica y propiedades de espín,mediante cálculos basados en DFT.
+    \item Modelar uniones moleculares tipo electrodo–molécula–electrodo, utilizando clústeres metálicos como contactos, para describir el transporte electrónico.
+    \item Analizar la transmisión electrónica y la corriente en función de la diferencia de potencial aplicada, identificando la contribución de los estados electrónicos relevantes en el transporte.
+    \item Estudiar el efecto del tamaño del trianguleno, la geometría de acoplamiento y la naturaleza de los contactos sobre las propiedades de transporte electrónico y de espín.
+\end{itemize}
+
+
+\chapter*{Introducción}
+\addcontentsline{toc}{chapter}{Introducción}
+
+\include{MarcoTeorico}
+\include{Metodologia}
+\include{Resultados}
+\include{Discusion}
+\include{Conclusiones}
+
+\printbibliography[heading=bibintoc, title={Bibliografía}]
+
+\frontmatter
+\chapter*{Anexos}
+\addcontentsline{toc}{chapter}{Anexos}
+
+\end{document}
+
